@@ -9,4 +9,4 @@ import{S as c}from"./vendor-CgTBfC_f.js";(function(){const o=document.createElem
     </a>
     </li>
     `).join("")}i.style.listStyle="none";i.style.display="flex";i.style.flexWrap="wrap";i.style.gap="24px";i.style.padding="20px";i.addEventListener("click",d);function d(p){p.preventDefault(),new c(".gallery a",{captionsData:"alt",captionPosition:"bottom",captionDelay:250})}
-//# sourceMappingURL=1-gallary-C9fIZnLE.js.map
+//# sourceMappingURL=1-gallery-C9fIZnLE.js.map
