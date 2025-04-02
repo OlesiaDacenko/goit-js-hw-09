@@ -66,8 +66,8 @@ const images = [
 
 const container = document.querySelector('.gallery');
 container.insertAdjacentHTML('beforeend', createMarkup(images));
-function createMarkup(arrey) {
-  return arrey
+function createMarkup(array) {
+  return array
     .map(
       item => `
     <li class="gallery-item" >
@@ -83,21 +83,15 @@ function createMarkup(arrey) {
     )
     .join('');
 }
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionPosition: 'bottom',
+  captionDelay: 250,
+});
 container.style.listStyle = 'none';
 container.style.display = 'flex';
 container.style.flexWrap = 'wrap';
 container.style.gap = '24px';
 container.style.padding = '20px';
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
-
-container.addEventListener('click', clickFoo);
-
-function clickFoo(event) {
-  event.preventDefault();
-  new SimpleLightbox('.gallery a', {
-    captionsData: 'alt',
-    captionPosition: 'bottom',
-    captionDelay: 250,
-  });
-}
